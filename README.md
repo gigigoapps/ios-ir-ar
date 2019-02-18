@@ -77,7 +77,7 @@ Agregar en embebed binary los siguientes frameworks:
 
 	Añadir imagen del proyecto
 
-###Uso
+### Uso
 
 1. Importar el framework de ARKit y crear una instancia de IRAR
 2. Llamar al constructor IRAR(id:) con el identificador del proyecto y asignarle su delegado. Opcionalmente puedes definir el logLevel.
