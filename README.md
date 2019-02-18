@@ -1,39 +1,43 @@
 # ios-ir-ar
 Image Recognition and Augmented Reality with ARKit
 
-1. Limitaciones
+## 1. Limitaciones
 
-    Modelo de móvil, versión mínima: iphone 6s
+    _Modelo de móvil_, versión mínima: **iphone 6s**
 
-    Versión mínima de sistema operativo para IR: iOS 11.3
+    Versión mínima de sistema operativo para _IR_: **iOS 11.3**
 
-    Versión mínima de sistema operativo para traqueo de imágenes: iOS 11.3
+    Versión mínima de sistema operativo para _traqueo de imágenes_: **iOS 11.3**
 
-    Versión mínima de sistema operativo para AR: iOS 12
+    Versión mínima de sistema operativo para _AR_: **iOS 12**
 
-    Versión mínima de sistema operativo para traqueo de objetos: iOS 12 
+    Versión mínima de sistema operativo para _traqueo de objetos_: iOS 12 
 
 
-2. Construcción de modelos 3D
+## 2. Construcción de modelos 3D
 
-a) Crear una carpeta.  Ejemplo: CreacionModelo.
+a) Crear una carpeta.  *Ejemplo*: CreacionModelo.
 
 b) Añadir los archivos copySceneKitAssets y scntool en la carpeta.
+	Los archivos los puedes encontrar en: Documentation -> ConstructorModels -> Files
 
-kitArchivos.zip
 
 c) Dentro crear una carpeta acabada en .scnassets con el nombre del modelo. Ejemplo: dancing.scnassets
 
 d) Añadir dentro de esa carpeta el modelo, animaciones y texturas al mismo nivel:
+
          Ejemplo:
+         
+         AÑADIR IMAGEN
 
 
 e) Abrimos el terminal en la raiz de nuestra carpeta, y escribimos lo siguiente:
-Estructura:
-./copySceneKitAssets NombreCarpetaAssets -o NuevaCarpetaOptimizada
+
+	Estructura:
+	./copySceneKitAssets NombreCarpetaAssets -o NuevaCarpetaOptimizada
  
-Ejemplo:
-./copySceneKitAssets dancing.scnassets -o dancing-optimizated.scnassets
+	Ejemplo:
+	./copySceneKitAssets dancing.scnassets -o dancing-optimizated.scnassets
 
 
 f) Creamos un archivo comprimido de tipo zip, de esta carpeta y es muy importante, no cambiar el nombre del archivo zip.
@@ -41,7 +45,7 @@ f) Creamos un archivo comprimido de tipo zip, de esta carpeta y es muy important
 d) Este archivo lo subiremos al servidor.
 
 
-3. Escaneo de objetos 3D
+## 3. Escaneo de objetos 3D
 
 Para poder escanear un objeto y poder realizar un reconocimiento o trackeo de un objeto 3D, debemos crear este objeto, para ello usaremos la app oficial de Apple que encontraremos en la carpeta de documentation -> ScaningObject.
 
@@ -57,53 +61,58 @@ Pasos para uso:
 
 
 
-4. GIG AR-IR
+## 4. GIG AR-IR
 
-    Instalación
+### Instalación
 
-            A través del Cartfile, añadir la siguiente referencia:
-            Añadir referencia
+A través del Cartfile, añadir la siguiente referencia:
 
-            Descargar solo la plataforma de ios:
-            carthage update --platform iOS
+Añadir referencia
 
-            Agregar en embebed binary los siguientes frameworks:
-            Añadir imagen del proyecto
+Descargar solo la plataforma de ios:
 
-    Uso
+	carthage update --platform iOS
 
-        Importar el framework de ARKit y crear una instancia de IRAR
+Agregar en embebed binary los siguientes frameworks:
 
-        Llamar al constructor IRAR(id:) con el identificador del proyecto y asignarle su delegado. Opcionalmente puedes definir el logLevel.
+	Añadir imagen del proyecto
 
-        El método Start, descargara la configuración de la librería y cuando acabe podrás lanzar el evento de launch para empezar a utilizar la librería.
+###Uso
 
-        Existen 2 opciones de uso, que el sdk se ocupe de IR y AR ó que te entregue los modelos según se requiera.
+1. Importar el framework de ARKit y crear una instancia de IRAR
+2. Llamar al constructor IRAR(id:) con el identificador del proyecto y asignarle su delegado. Opcionalmente puedes definir el logLevel.
+3. El método **Start**, descargara la configuración de la librería y cuando acabe podrás lanzar el evento de launch para empezar a utilizar la librería.
+4. Existen 2 opciones de uso, que el sdk se ocupe de IR y AR ó que te entregue los modelos según se requiera.
 
-            Para lanzar el método de Launch, antes desde tu storyBoard, hay que crear una instancia de un ARSCNView, lincarla a tu ViewController y añadir como parámetro del método.
+		a) Para lanzar el método de Launch, antes desde tu storyBoard, hay que crear una instancia de un ARSCNView, lincarla a tu ViewController y añadir como parámetro del método.
+		b) El método delegado “func idRecognition(id: String)”  devolverá el Id de la imágen reconocida.
 
-            El método delegado “func idRecognition(id: String)”  devolverá el Id de la imágen reconocida.
+**SDK:**
 
+    Para lanzar el método de Launch, antes desde tu storyBoard, hay que crear una instancia de un ARSCNView, lincarla a tu ViewController y añadir como parámetro del método.
 
-            Primero recuperaremos el listado de ID con los que descargar el modelo a través del metodo público:
-            open func getListID() -> [String]?
-
-            Segundo, recuperar el modelo con el identificador dado:
-            open func get3DModel(id: String)
-
-            Recuperaremos el modelo a través del método delegado:
-            func model3D(result: ResultGet3DModel)
-            SDK:
-            Aplicación integradora:
+    El método delegado “func idRecognition(id: String)”  devolverá el Id de la imágen reconocida.
 
 
+**Aplicación integradora:**
 
-    Json configuración
+    Primero recuperaremos el listado de ID con los que descargar el modelo a través del metodo público:
+    open func getListID() -> [String]?
 
-    A continuación se definirá los diferentes modos en los que puede funcionar el framework.
+    Segundo, recuperar el modelo con el identificador dado:
+    open func get3DModel(id: String)
+
+    Recuperaremos el modelo a través del método delegado:
+    func model3D(result: ResultGet3DModel)
 
 
-        Modo reconocimiento de imágenes (Antiguo Vuforia).
+
+**Json configuración:**
+
+A continuación se definirá los diferentes modos en los que puede funcionar el framework.
+
+
+_Modo reconocimiento de imágenes (Antiguo Vuforia)._
 
         El nodo del json contará con el siguiente formato:
 
@@ -117,11 +126,11 @@ Pasos para uso:
         idReco: Es el identificador que devolverá una vez reconocido
         type: Identifica el tipo de objeto que busca reconocer.
 
-        Reconocimiento objetos 3D
+_Reconocimiento objetos 3D_
 
         Próximamente.
 
-        IR/AR + Acción.
+_IR/AR + Acción._
 
         Todas las acciones, tendrán una serie de variables comunes:
             1) type.   Tipos de acción: model3D, text, video
