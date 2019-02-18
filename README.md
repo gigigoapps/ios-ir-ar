@@ -3,15 +3,15 @@ Image Recognition and Augmented Reality with ARKit
 
 ## 1. Limitaciones
 
-    _Modelo de móvil_, versión mínima: **iphone 6s**
+_Modelo de móvil_, versión mínima: **iphone 6s**
 
-    Versión mínima de sistema operativo para _IR_: **iOS 11.3**
+Versión mínima de sistema operativo para _IR_: **iOS 11.3**
 
-    Versión mínima de sistema operativo para _traqueo de imágenes_: **iOS 11.3**
+Versión mínima de sistema operativo para _traqueo de imágenes_: **iOS 11.3**
 
-    Versión mínima de sistema operativo para _AR_: **iOS 12**
+Versión mínima de sistema operativo para _AR_: **iOS 12**
 
-    Versión mínima de sistema operativo para _traqueo de objetos_: iOS 12 
+Versión mínima de sistema operativo para _traqueo de objetos_: **iOS 12**
 
 
 ## 2. Construcción de modelos 3D
