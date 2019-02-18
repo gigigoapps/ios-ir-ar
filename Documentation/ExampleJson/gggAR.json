@@ -1,0 +1,104 @@
+{
+	"listReco": [
+		{
+			"image": "https://s3-eu-west-1.amazonaws.com/ferringo-ci/Pruebas/Images/ship.jpg",
+			"idReco": "Image_AR2",
+			"type": "ir",
+			"action": {
+				"type": "model3D",
+				"source": "https://s3-eu-west-1.amazonaws.com/ferringo-ci/Pruebas/3DModels/fly-optimized.scnassets.zip",
+				"idModel": "B_787_8.dae",
+				"idNodo": "node/11",
+				"styles": {
+					"scale": {
+						"x": 0.01,
+						"y": 0.01,
+						"z": 0.01
+					},
+					"position": { 
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+				}
+			}
+		},
+		{
+			"image": "https://s3-eu-west-1.amazonaws.com/ferringo-ci/Pruebas/Images/cats.jpg",
+			"idReco": "Image_AR3",
+			"type": "ir",
+			"action": {
+				"type": "text",
+				"source": "TEXTO DESDE SERVIDOR"
+			}
+
+		},
+		{
+			"image": "https://s3-eu-west-1.amazonaws.com/ferringo-ci/Pruebas/Images/image1_3.png",
+			"idReco": "Lata_Cocacola",
+			"type": "ir"
+		},
+		{
+			"image": "https://s3-eu-west-1.amazonaws.com/ferringo-ci/Pruebas/Images/image2_3.png",
+			"idReco": "Lata_Cocacola",
+			"type": "ir"
+		},
+		{
+			"image": "https://s3-eu-west-1.amazonaws.com/ferringo-ci/Pruebas/Images/image3_3.png",
+			"idReco": "Lata_Cocacola",
+			"type": "ir",
+			"action": {
+				"type": "model3D",
+				"source": "https://s3-eu-west-1.amazonaws.com/ferringo-ci/Pruebas/ship.scn"
+			}
+		},
+		{
+			"image": "https://s3-eu-west-1.amazonaws.com/ferringo-ci/Pruebas/Images/gigigo.jpg",
+			"idReco": "Image_with_3DModel",
+			"type": "ir",
+			"action": {
+				"type": "model3D",
+				"source": "https://s3-eu-west-1.amazonaws.com/ferringo-ci/Pruebas/3DModels/dancing-optimizated.scnassets.zip",
+				"idModel": "idleFixed.dae",
+				"idModelAnim": "twist_danceFixed.dae",
+				"idNodo": "node/11",
+				"idNodoAnim": "twist_danceFixed-1",
+				"styles": {
+					"scale": {
+						"x": 0.1,
+						"y": 0.1,
+						"z": 0.1
+					},
+					"position": { 
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+				}
+			}
+		},
+		{
+			"image": "https://s3-eu-west-1.amazonaws.com/ferringo-ci/Pruebas/Images/birds.jpg",
+			"idReco": "Image_AR1",
+			"type": "ir",
+			"action": {
+				"type": "model3D",
+				"source": "https://s3-eu-west-1.amazonaws.com/ferringo-ci/Pruebas/3DModels/fan-optimized.scnassets.zip",
+				"idModel": "Industrial_Fan_2.dae",
+				"idNodo": "Industrial_Fan_1",
+				"styles": {
+					"scale": {
+						"x": 0.1,
+						"y": 0.1,
+						"z": 0.1
+					},
+					"position": { 
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+				}
+			}
+		}
+	]
+}

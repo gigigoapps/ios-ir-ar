@@ -1,0 +1,8 @@
+# GIGLibrary
+github "gigigoapps/gigigo-ios-lib" "develop"
+
+# Zip
+github "marmelroy/Zip" ~> 1.0
+
+# Minizip
+github "dexman/Minizip" ~> 1.0
