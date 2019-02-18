@@ -28,7 +28,7 @@ d) Añadir dentro de esa carpeta el modelo, animaciones y texturas al mismo nive
 
          Ejemplo:
          
-         AÑADIR IMAGEN
+         ![](https://raw.githubusercontent.com/gigigoapps/ios-ir-ar/master/Documentation/Images/image1.png)
 
 
 e) Abrimos el terminal en la raiz de nuestra carpeta, y escribimos lo siguiente:
@@ -52,11 +52,17 @@ Para poder escanear un objeto y poder realizar un reconocimiento o trackeo de un
 Pasos para uso:
 
 1. Detectar el objeto
+![](https://raw.githubusercontent.com/gigigoapps/ios-ir-ar/master/Documentation/Images/reco1.PNG)
 2. Ajustar ancho, importante, ampliar el tamaño para que tenga aproximadamente 2 cuadrículas, si el área es pequeña cuando llegue al final del proceso os informará que no tiene suficientes puntos para generarlo.
+![](https://raw.githubusercontent.com/gigigoapps/ios-ir-ar/master/Documentation/Images/reco2.PNG)
 3. Escanear el objeto por sus 4 caras
+![](https://raw.githubusercontent.com/gigigoapps/ios-ir-ar/master/Documentation/Images/reco3.PNG)
 4. Ajustar el eje de coordenadas
-5. Informe de que el objeto se ha generado correctamente.	
-6.  Descargarlo compartiéndolo con el email o similar.	
+![](https://raw.githubusercontent.com/gigigoapps/ios-ir-ar/master/Documentation/Images/reco4.PNG)
+5. Informe de que el objeto se ha generado correctamente.
+![](https://raw.githubusercontent.com/gigigoapps/ios-ir-ar/master/Documentation/Images/reco5.PNG)
+6.  Descargarlo compartiéndolo con el email o similar.
+![](https://raw.githubusercontent.com/gigigoapps/ios-ir-ar/master/Documentation/Images/reco6.PNG)	
 7. El archivo resultante será un archivo con formato:  .arobject
 
 
